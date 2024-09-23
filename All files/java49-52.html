@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>49-52 Chapter</title>
+    <style>
+        .form-container {
+            margin-bottom: 20px;
+        }
+
+        .display-container {
+            margin-top: 20px;
+            border: 1px solid #ccc;
+            border-radius: 20px;
+            padding: 10px;
+            width: 30%;
+            background-color: rgb(201, 169, 219);
+            background: linear-gradient(to left , rgb(173, 74, 197), rgb(255, 248, 156));
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Signup Form</h1>
+    <div class="form-container">
+        <form id="signupForm">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password" required><br><br>
+            <input type="submit" value="Sign Up" onclick="form()">
+        </form>
+    </div>
+    <h2>Data Store</h2>
+    <div class="display-container" id="displayData"></div>
+
+    <p id="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit officiis aspernatur aperiam dolore harum, maiores deserunt numquam omnis architecto distinctio modi animi totam doloremque eveniet repudiandae minus libero magni sequi. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores unde in quibusdam voluptate ab blanditiis, odio assumenda repudiandae saepe ipsum.
+        <a href="Javascript:void(0)" onclick="para1()">Read more</a>
+    </p>
+
+
+
+    <script>
+        document.getElementById('signupForm').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent form submission
+
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            // value likhna sa os ma value store ho jati han
+
+
+
+           var a=  document.getElementById('displayData').innerHTML =
+                `
+                <h2>Submitted Data:</h2>
+                <p><strong>Name:</strong> ${name}</p>
+                <p><strong>Email:</strong> ${email}</p>
+                <p><strong>Password:</strong> ${password}</p>
+             `
+           a.this.style.color == 'red';
+        });
+
+         function para1() {
+      var LongPara = "Slow lorises are a group of several species of trepsirrhine primates whichmake up the genus Nycticebus. They have a round head, narrow snout, large eyes, and a variety ofdistinctive coloration patterns that are species-dependent. The hands and feet of slow lorises have severaladaptations that give them a pincer-like grip and enable them to grasp branches for long periods of time.Slow lorises have a toxic bite, a rare trait among mammals.";
+      document.getElementById('paragraph').innerHTML = LongPara;}
+
+    </script>
+
+
+
+
+</body>
+
+</html>

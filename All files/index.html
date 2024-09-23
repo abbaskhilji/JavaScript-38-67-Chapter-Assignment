@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Chapter 38</title>
+</head>
+
+<body>
+    <script>
+        document.write("<h2><b><center><i>QUESTION NO : 01</center><b></h2>")
+        function power() {
+            var a = 3;
+            var b = 9;
+            var power = Math.pow(a, b);
+            console.log(power);
+            document.write(`<center><i>${power}</i></center>`);
+
+        }
+        power();
+        document.write("<center><i><h2>QUESTION NO : 02</h2></center>");
+        var year = parseInt(prompt("Enter any year"));
+        function LeapYears() {
+            if (year % 4 === 0) {
+                console.log(year % 4 || year % 100 !== 0);
+
+
+
+
+            }
+            else {
+                console.log("false");
+
+
+            }
+
+
+        }
+        LeapYears();
+
+
+        document.write("<center><i><h2>QUESTION NO : 03</h2></center>");
+        function SemiPerimeterOfTriangle(a, b, c) {
+            return (a + b + c) / 2;
+
+        };
+
+        function AreaOfTriangle(a, b, c) {
+            var S = SemiPerimeterOfTriangle(6, 8, 10);
+            var area = Math.sqrt(S * (S - a) * (S - b) * (S - c));
+            return (area);
+        };
+        console.log(AreaOfTriangle(6, 8, 10));
+
+
+        document.write("<center><i><h2>QUESTION NO : 04</h2></center>");
+        var StudentMarks1 = prompt("Enter your first subject number out of 25");
+        var a = Number(StudentMarks1);
+        a.toFixed(2);
+        if (StudentMarks1 > 25 || StudentMarks1 < 0) {
+            alert("Please enter b/w 0 to 25 your number is unvalid");
+
+        }
+        var StudentMarks2 = prompt("Enter your second subject number out of 25");
+        var b = Number(StudentMarks2);
+        b.toFixed(2);
+        if (StudentMarks2 > 25 || StudentMarks2 < 0) {
+            alert("Please enter b/w 0 to 25 your number is unvalid");
+
+        }
+        var StudentMarks3 = prompt("Enter your third subject number out of 25");
+        var c = Number(StudentMarks3);
+        c.toFixed(2);
+        if (StudentMarks3 > 25 || StudentMarks3 < 0) {
+            alert("Please enter number b/w 0 to 25 your number is unvalid");
+
+        };
+
+
+        function average() {
+            var StudentsAverage = (a + b + c) / 3;
+            return StudentsAverage;
+
+        };
+        console.log(average());
+        document.write("<center> This is average of Student three subjects: ", average(), "</center>");
+
+        function percentage() {
+            var TotalPercenteage = (a + b + c) / 75 * 100;
+            return TotalPercenteage;
+
+        };
+        console.log(percentage());
+        var percent = percentage();
+        document.write("<center></br>This is percentage of a student in three subject: ", percent, "%</center>");
+
+
+        document.write("<center><i><h2>QUESTION NO : 05</h2></center>");
+        function FindingIndex(letter, character) {
+            if (typeof letter !== 'string' || character.length !== 1 || typeof character !== 'string') {
+                return -1;
+
+            }
+            for (let i = 0; i < letter.length; i++) {
+                if (letter[i] === character) {
+                    return i;
+
+                }
+
+
+
+            }
+            return -1;
+
+
+        }
+        console.log(FindingIndex("Maryam", "m"));
+
+
+        document.write("<center><i><h2>QUESTION NO : 06</h2></center>");
+        document.write("<center>SENTENCE:</BR>Before Vowels cutoff the sentence is:</br> My name is maryam and i a</br></center>")
+        function VowelsExtract(paragraph) {
+
+
+            if (typeof paragraph !== 'string' || paragraph.length > 25) {
+                return "Invalid input"
+            }
+            var vowels = /[aeiouAEIOU]/g;
+            var result = paragraph.replace(vowels, '');
+            return result;
+
+
+        }
+        var output = VowelsExtract("My name is maryam and i a");
+        document.write("<center>RESULT:</BR>After cutoff of vowels the sentence is:</br>", output, "</center>");
+
+        document.write("<center><i><h2>QUESTION NO : 07</h2></center>");
+        function DoubleVowels(text) {
+            vowels1 = 'aeiouAEIOU'
+            var initialize = 0;
+            for (let i = 0; i < text.length - 1; i++) {
+                var FirstElement = text[i];
+                var SecondElement = text[i + 1];
+                switch (true) {
+                    case vowels1.includes(FirstElement) && vowels1.includes(SecondElement):
+                        initialize++;
+
+                        break;
+
+
+                    default:
+                        break;
+                }
+
+
+
+            }
+            return initialize;
+
+
+        }
+        var output1 = (DoubleVowels("Pleases read this application and give me gratuity"));
+        document.write(`<center>SENTENCE:</br> Pleases read this application and give me gratuity</br>RESULT:</BR>and number of double vowels alternately is ${output1}`);
+
+
+        document.write("<center><i><h2>QUESTION NO : 08</h2></center>");
+        var Changingunitsvalue = prompt("Enter any quantity in km");
+        var units1 = Number(Changingunitsvalue);
+        document.write(`The distance b/w two cities in km is ${Changingunitsvalue}</br>`);
+        function meters() {
+            var ChangingtoMeters = Changingunitsvalue * 1000;
+            return ChangingtoMeters;
+
+        };
+        var metersvalue = meters();
+        console.log(metersvalue.toFixed(2));
+        document.write(`The distance b/w two cities in meters is ${metersvalue}</br>`);
+
+        function feet() {
+            var feetChanging = Changingunitsvalue * 3280.84;
+            return feetChanging;
+        };
+
+        var feetvalue = feet();
+        console.log(feetvalue.toFixed(2));
+        document.write(`The distance b/w two cities in feet is ${feetvalue}</br>`);
+
+        function inches() {
+            var Changinginches = Changingunitsvalue * 39370.1;
+            return Changinginches;
+
+
+        };
+        var inchesvalue = inches();
+        console.log(inchesvalue.toFixed(2));
+        document.write(`<center>The distance b/w two cities in inches is ${inchesvalue}`);
+
+
+        function EmployeesOverTimepay(overtimehour) {
+            var EmplyeePay = 15000;
+
+            var overtimePay = overtimehour * 12;
+            var totalAmount = overtimePay + EmplyeePay;
+            return totalAmount;
+
+
+        }
+        console.log(EmployeesOverTimepay(5));
+
+
+
+        function calculateCurrencyNotes(amountInHundreds) {
+    const totalAmount = amountInHundreds; // Convert to actual amount
+    let notes100 = 0;
+    let notes50 = 0;
+    let notes10 = 0;
+
+    // Calculate the number of 100 notes
+    notes100 = Math.floor(totalAmount / 100);
+    let remainingAmount = totalAmount % 100;
+
+    // Calculate the number of 50 notes
+    notes50 = Math.floor(remainingAmount / 50);
+    remainingAmount %= 50;
+
+    // Calculate the number of 10 notes
+    notes10 = Math.floor(remainingAmount / 10);
+    
+    return {
+        notes100,
+        notes50,
+        notes10
+    };
+}
+
+// Prompt the user for the amount to withdraw
+const amountToWithdraw = parseInt(prompt("Enter the amount to withdraw (in hundreds):"), 10);
+if (isNaN(amountToWithdraw) || amountToWithdraw < 0) {
+    console.log("Please enter a valid positive number.");
+} else {
+    const result = calculateCurrencyNotes(amountToWithdraw);
+    console.log(`For ${amountToWithdraw} amount:`);
+    console.log(`100 notes: ${result.notes100}`);
+    console.log(`50 notes: ${result.notes50}`);
+    console.log(`10 notes: ${result.notes10}`);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

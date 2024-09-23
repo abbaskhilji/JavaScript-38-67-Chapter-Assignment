@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .img {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+
+
+
+        }
+
+        .img img {
+            width: 20vw;
+            height: 20vw;
+            border: 2px solid rgb(82, 77, 77);
+
+        }
+
+        .Mobileprice {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            text-align: center;
+            font-weight: 500;
+
+
+        }
+
+        .marks {
+            display: flex;
+            gap: 5vw;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .pic img {
+            width: 30vw;
+            height: 25vw;
+            margin-top: 8vw;
+        }
+
+        .table h1 {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        .table table tr th {
+            border: 1.5px solid black;
+            color: rgb(23, 23, 120);
+        }
+
+        .counter {
+            height: 90vh;
+            width: 80vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .counter h1 {
+            margin: 30px;
+        }
+
+        .IncreDecre-button {
+            width: 30%;
+            display: flex;
+            justify-content: center;
+
+        }
+
+        .increment,
+        .decrement,
+        .reset {
+            height: 50px;
+            width: 120px;
+            padding: 0 40px;
+            border-radius: 10px;
+            font-size: 40px;
+            background-color: #2e8d46;
+            border: 2px solid #2e8d46;
+            color: white;
+            margin: 20px;
+
+        }
+
+        .reset {
+            font-size: 20px;
+        }
+
+        .zero {
+            height: 50px;
+            min-width: 120px;
+            border-radius: 10px;
+            background-color: rgba(255, 0, 0, 0.187);
+            margin-top: 20px;
+            font-size: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .increment,
+        .decrement,
+        .zero {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <center><a href="#"
+            style="color: black; text-decoration: none; font-size: 4vw;font-weight: bolder; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;text-decoration: none; "
+            ); onclick="greets()">HELLO WORLD</a>
+
+        <div class="img">
+            <img onclick="MobilePhone()" src="Lovepik_com-401774514-rhino-modeling-phone.png" alt="">
+            <img onclick="MobilePhone()" src="pngimg.com - smartphone_PNG8501.png" alt="">
+            <img onclick="MobilePhone()" src="Android-Mobile-Download-Free-PNG.png" alt="">
+        </div>
+        <div class="Mobileprice">
+            <div class="price1">
+                <p>Rs <b> 30000</b> PKR</p>
+                <p>Model : <b>iPhone</b> 15 pro max</p>
+                <p>64GB-4GB RAM</p>
+            </div>
+            <div class="price2">
+                <p>Rs <b>10000</b> PKR</p>
+                <p>Model : <b>Samsung</b> a55</p>
+                <p>20GB-4GB RAM</p>
+
+            </div>
+            <div class="price3">
+                <p>Rs <b>10000</b> PKR</p>
+                <p>Model : <b> Vivo</b> y20</p>
+                <p>18GB-4GB RAM</p>
+
+            </div>
+        </div>
+        <div class="table">
+            <h1>Student Record</h1>
+
+            <table>
+
+                <tr>
+                    <th>*</th>
+                    <th>Maths</th>
+                    <th>S.S.t</th>
+                    <th>English</th>
+                    <th>Total Marks</th>
+                    <th>Removing</th>
+                </tr>
+                <tr>
+                    <th>Maryam</th>
+                    <th id="elements3">80</th>
+                    <th id="elements2">90</th>
+                    <th id="elements1">50</th>
+                    <th id="elements">100</th>
+                    <th onclick="Table()" style="cursor: pointer;">Delete</th>
+                </tr>
+                <tr>
+                    <th>Saima</th>
+                    <th id="elements6">71</th>
+                    <th id="elements5">89</th>
+                    <th id="elements4">76</th>
+                    <th id="elements0">100</th>
+                    <th onclick="Table1()" style="cursor: pointer;">Delete</th>
+                </tr>
+                <tr>
+                    <th>Imran</th>
+                    <th id="elements10">34</th>
+                    <th id="elements9">97</th>
+                    <th id="elements8">90</th>
+                    <th id="elements7">100</th>
+                    <th onclick="Table2()" style="cursor: pointer;">Delete</th>
+                </tr>
+            </table>
+
+
+            <!-- <button onmouseover="this.style.color = 'blue'" onclick="removing()">Delete</button>
+                <button onmouseover="this.style.color = 'blue'" onclick="remove()">Delete</button> -->
+
+
+        </div>
+        <div class="pic"><img src="lone-tree.jpg" alt="" onmouseover="mouse(event ,'over')"
+                onmouseout="mouse(event,'out')">
+
+
+        </div>
+
+
+        <div class="counter">
+            <h1>Counter App</h1>
+            <div class="IncreDecre-button">
+                <button class="increment">+</button>
+                <div class="zero">0</div>
+                <button class="decrement">-</button>
+
+            </div>
+            <button class="reset">Reset</button>
+        </div>
+
+
+
+
+        <script>
+            function greets() {
+                var welcome = alert('Welcome to the page');
+                document.getElementById("greeting").welcome;
+
+            };
+            function MobilePhone() {
+                var attention = alert('Thanks for purchasing');
+                document.getElementById('Mobile').attention;
+
+            };
+
+
+            function mouse(event, type) {
+                if (type === 'over') {
+                    event.target.src = 'ground-red-outdoor-child-complex-colorful.jpg'
+
+                }
+                else {
+                    event.target.src = 'lone-tree.jpg'
+                }
+
+            };
+            function Table() {
+
+
+                var remove = document.getElementById('canceling');
+                var hide = document.getElementById('elements');
+                var hide1 = document.getElementById('elements1');
+                var hide2 = document.getElementById('elements2');
+                var hide3 = document.getElementById('elements3');
+                hide.style.display = 'none';
+                hide1.style.display = 'none';
+                hide2.style.display = 'none';
+                hide3.style.display = 'none';
+
+            }
+            function Table1() {
+
+
+                var remove1 = document.getElementById('canceling1');
+                var hide0 = document.getElementById('elements0');
+                var hide4 = document.getElementById('elements4');
+                var hide5 = document.getElementById('elements5');
+                var hide6 = document.getElementById('elements6');
+                hide0.style.display = 'none';
+                hide4.style.display = 'none';
+                hide5.style.display = 'none';
+                hide6.style.display = 'none';
+
+            }
+            function Table2() {
+
+
+                var remove2 = document.getElementById('canceling2');
+                var hide7 = document.getElementById('elements7');
+                var hide8 = document.getElementById('elements8');
+                var hide9 = document.getElementById('elements9');
+                var hide10 = document.getElementById('elements10');
+                hide7.style.display = 'none';
+                hide8.style.display = 'none';
+                hide9.style.display = 'none';
+                hide10.style.display = 'none';
+
+            }
+            var counter = 0;
+            var zero = document.querySelector('.zero');
+            var incrementBtn = document.querySelector('.increment');
+            var decrementBtn = document.querySelector('.decrement');
+            var resetBtn = document.querySelector('.reset');
+
+            incrementBtn.addEventListener('click', () => {
+                counter++;
+                zero.innerHTML = counter;
+
+
+            });
+            decrementBtn.addEventListener('click', () => {
+                counter--;
+                zero.innerHTML = counter;
+            });
+            resetBtn.addEventListener('click', reset);
+
+            function reset() {
+                counter = 0;
+                zero.innerHTML = counter;
+            }
+
+
+
+
+
+
+        </script>
+
+</body>
+
+</html>
